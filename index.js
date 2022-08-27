@@ -1,17 +1,37 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+
+  for(let i=0;i<array.length;i++){
+     const compliment=target - array[i]
+  for(let j=i+1;j<array.length;j++){
+      if (array[j] === compliment)return true;
+   }
+  }
+   return false;
+ }
 
 /* 
   Write the Big O time complexity of your function here
+  runtime: 0(n^2)
+  space: o(n)
 */
 
 /* 
   Add your pseudocode here
+  iterate through the array using for loop
+  for each of the current value idenitify a compliment that will add to the target
+  iterate through the remaining numbers 
+  check for compliment
+  return true or false 
 */
 
 /*
   Add written explanation of your solution here
+   iterate through the array using for loop
+  for each of the current value idenitify a compliment that will add to the target
+  iterate through the remaining numbers 
+  check for compliment
+  return true or false
 */
 
 // You can run `node index.js` to view these console logs
